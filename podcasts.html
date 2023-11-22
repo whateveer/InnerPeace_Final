@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inner Peace - SPA & Beauty</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    
+       
+
+
+</head>
+<body>
+     <!-- header -->
+    
+     <section class="header">
+        <a href="#" class="logo"> 
+        <img src="images/logoo.png" alt="Inner Peace Logo">
+        Inner Peace </a>
+        <nav class="navbar">
+           <div id="close-navbar" class="fas fa-times"></div>
+           <a href="index.html">home</a>
+           <a href="about.html">about</a>
+           <a href="services.html">services</a>
+           <a href="blogs.html">blogs</a>
+           <a href="events.html">special events</a>
+           <a href="podcasts.html">media</a>
+           <a href="faq.html">FAQ</a>
+
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+     
+    </section>
+
+    <section class="meditation">
+        <h1 class="heading">Meditations</h1>
+    
+        <div class="video-cell">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6m2Ma8uX74s?si=rDwekp-0pDAI8Gcn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
+        <div class="description-cell">
+            <h2 class="medit">Numerous studies suggest that regular meditation can have positive effects on both mental and physical health. It has been linked to reduced stress, anxiety, and depression. Additionally, meditation may improve attention, concentration, and overall psychological well-being.</h2>
+        </div>
+    
+    </section>
+    
+    
+
+
+    <section class="podcasts">
+        <h1 class="heading">Podcasts & Interviews</h1>
+
+        <div class="podcast-container">
+            <div class="podcast">
+                <h2>SPA Medical Insider</h2>
+                <div class="audio-buttons">
+                    <audio id="podcast1" controls>
+                        <source src="C:\Users\админ\Downloads\Telegram Desktop\Assignment 4\webpage\y2mate.com - Medical Spa Insider Podcast  How to Make Sales Your Zone of Genius.mp3" type="audio/mp3">
+                    </audio>
+                    <div class="like-dislike">
+                        <button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="podcast">
+                <h2>SPA Business Mastery</h2>
+                <div class="audio-buttons">
+                    <audio id="podcast2" controls>
+                        <source src="C:\Users\админ\Downloads\Telegram Desktop\Assignment 4\webpage\y2mate.com - Medical Spa Insider Podcast  How to Make Sales Your Zone of Genius.mp3" type="audio/mp3">
+                    </audio>
+                    <div class="like-dislike">
+                        <button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="podcast">
+                <h2>The SPA Strong Podcast</h2>
+                <div class="audio-buttons">
+                    <audio id="podcast3" controls>
+                        <source src="sound/podcast.mp3" type="audio/mp3">
+                    </audio>
+                    <div class="like-dislike">
+                        <button class="btn btn-success like-button">Like</button>
+                        <button class="btn btn-danger dislike-button">Dislike</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="footer">
+
+        <div class="box-container">
+     
+           <div class="box">
+              <h3> Find us here </h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
+              <div class="share">
+                 <a href="#" class="fab fa-facebook-f"></a>
+                 <a href="#" class="fab fa-twitter"></a>
+                 <a href="#" class="fab fa-instagram"></a>
+                 <a href="#" class="fab fa-linkedin"></a>
+              </div>
+           </div>
+     
+           <div class="box">
+              <h3>contact us</h3>
+              <p>+7 700 341 5678</p>
+              <a href="#" class="link">innerpeace_spa@gmail.com</a>
+           </div>
+     
+           <div class="box">
+              <h3>localization</h3>
+              <p> Mangilik el <br>
+                Astana <br>
+                Kazakhstan</p>
+           </div>
+     
+        </div>
+     
+        <div class="credit"> created by <span>Samal & Marzhan</span> | all rights reserved! </div>
+     
+     </section>
+
+     <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    var audio1 = document.getElementById('podcast1');
+    var audio2 = document.getElementById('podcast2');
+    var audio3 = document.getElementById('podcast3');
+    var video = document.querySelector('iframe');
+    video.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    
+    audio1.addEventListener('play', function () {
+        console.log('Audio 1 is playing');
+    });
+
+    audio1.addEventListener('pause', function () {
+        console.log('Audio 1 is paused');
+    });
+
+    audio2.addEventListener('play', function () {
+        console.log('Audio 2 is playing');
+    });
+
+    audio2.addEventListener('pause', function () {
+        console.log('Audio 2 is paused');
+    });
+
+    audio3.addEventListener('play', function () {
+        console.log('Audio 3 is playing');
+    });
+
+    audio3.addEventListener('pause', function () {
+        console.log('Audio 3 is paused');
+    });
+});
+
+const likeButtons = document.querySelectorAll(".like-button");
+const dislikeButtons = document.querySelectorAll(".dislike-button");
+
+let likeCounts = Array.from({ length: likeButtons.length }, () => 0);
+let dislikeCounts = Array.from({ length: dislikeButtons.length }, () => 0);
+
+function updateLikeCounter(index) {
+    const likeButton = likeButtons[index];
+    likeButton.textContent = `${likeCounts[index]} Likes`;
+}
+
+function updateDislikeCounter(index) {
+    const dislikeButton = dislikeButtons[index];
+    dislikeButton.textContent = `${dislikeCounts[index]} Dislikes`;
+}
+
+likeButtons.forEach((likeButton, index) => {
+    likeButton.addEventListener("click", () => {
+        likeCounts[index]++;
+        updateLikeCounter(index);
+    });
+});
+
+dislikeButtons.forEach((dislikeButton, index) => {
+    dislikeButton.addEventListener("click", () => {
+        dislikeCounts[index]++;
+        updateDislikeCounter(index);
+    });
+});
+
+    </script>
+</body>
+</html>

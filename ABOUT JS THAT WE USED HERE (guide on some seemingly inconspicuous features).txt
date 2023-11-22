@@ -1,0 +1,10 @@
+Final Exam | a small guide on JavaScript that we have used on our website (upd)
+ 
+1. You can see a clear example of objects and their properties on the blogs.html page
+2. "Mousover" event listener is used on services.html page (for calendar)
+3. An animation appears after you click on the send button in the contact form (index.html)
+4. "Keypress" event listener is used on blogs.html page, to check it please press first down arrow, then right and left arrow buttons
+5. Sound appears when you choose any date on the calendar and click (popping when appointment form opens)
+6. There are flip-cards on the services.html page
+7. We used anime.js to implement some animation on the faq.html page, for 2 questionmarks
+8. There js function for the like and dislike buttons that counts likes and dislikes while clicking, on the podcasts.html page 

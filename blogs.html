@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inner Peace - SPA & Beauty</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header -->
+    
+    <section class="header">
+
+        <a href="#" class="logo"> 
+        <img src="images/logoo.png" alt="Inner Peace Logo">
+        Inner Peace
+    </a>
+        <nav class="navbar">
+           <div id="close-navbar" class="fas fa-times"></div>
+           <a href="index.html">home</a>
+           <a href="about.html">about</a>
+           <a href="services.html">services</a>
+           <a href="blogs.html">blogs</a>
+           <a href="events.html">special events</a>
+           <a href="podcasts.html">media</a>
+           <a href="faq.html">FAQ</a>
+
+        </nav>
+     
+        <div id="menu-btn" class="fas fa-bars"></div>
+     
+     </section>
+<!-- header -->
+
+<!-- blog -->
+
+<section class="blogs" id="blog">
+
+    <h1 class="heading"> our blogs </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="images/blog1.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Skin Care</a>
+                <span>by admin / 19th july, 2021</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/blog2.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Meditations</a>
+                <span>by admin / 19th july, 2021</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/blog3.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Body Wrapping</a>
+                <span>by admin / 19th july, 2021</span>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.</p>
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blog end-->
+
+
+<!-- footer -->
+
+<section class="footer">
+
+    <div class="box-container">
+ 
+       <div class="box">
+          <h3> Find us here </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
+          <div class="share">
+             <a href="#" class="fab fa-facebook-f"></a>
+             <a href="#" class="fab fa-twitter"></a>
+             <a href="#" class="fab fa-instagram"></a>
+             <a href="#" class="fab fa-linkedin"></a>
+          </div>
+       </div>
+ 
+       <div class="box">
+          <h3>contact us</h3>
+          <p>+7 700 341 5678</p>
+          <a href="#" class="link">innerpeace_spa@gmail.com</a>
+       </div>
+ 
+       <div class="box">
+          <h3>localization</h3>
+          <p> Mangilik el <br>
+            Astana <br>
+            Kazakhstan</p>
+       </div>
+ 
+    </div>
+ 
+    <div class="credit"> created by <span>Samal & Marzhan</span> | all rights reserved! </div>
+ 
+ </section>
+
+
+
+<!-- footer end-->
+
+
+
+<script src="js/script.js"></script>
+<script>
+  const blogData = [
+    {
+      image: 'images/blog1.jpg',
+      title: 'Skin Care',
+      date: '19th July, 2021',
+      content:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.',
+    },
+    {
+      image: 'images/blog2.jpg',
+      title: 'Meditations',
+      date: '19th July, 2021',
+      content:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.',
+    },
+    {
+      image: 'images/blog3.jpg',
+      title: 'Body Wrapping',
+      date: '19th July, 2021',
+      content:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.',
+    },
+    // Add more blog objects here
+    {
+      image: 'images/blog4.jpg',
+      title: 'Aromatherapy',
+      date: '20th July, 2021',
+      content:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.',
+    },
+    {
+      image: 'images/blog5.jpg',
+      title: 'Yoga for Beginners',
+      date: '21st July, 2021',
+      content:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic aut eligendi, doloremque nihil sapiente fugit aliquam? Error nisi velit, a atque fugit laborum.',
+    },
+  ];
+
+        const boxContainer = document.querySelector('.box-container');
+        let currentIndex = 0;
+
+  function showBlogs() {
+            const visibleBlogs = 4; // Number of visible blogs
+            boxContainer.innerHTML = ''; // Clear the container
+            for (let i = 0; i < visibleBlogs; i++) {
+                const position = (currentIndex + i) % blogData.length;
+                createBlogBox(blogData[position], i);
+            }
+        }
+
+
+  function createBlogBox(blog) {
+    const box = document.createElement('div');
+    box.classList.add('box');
+
+    const image = document.createElement('div');
+    image.classList.add('image');
+    const img = document.createElement('img');
+    img.src = blog.image;
+    img.alt = '';
+    image.appendChild(img);
+
+    const content = document.createElement('div');
+    content.classList.add('content');
+    const title = document.createElement('a');
+    title.classList.add('title');
+    title.textContent = blog.title;
+    const date = document.createElement('span');
+    date.textContent = `by admin / ${blog.date}`;
+    const para = document.createElement('p');
+    para.textContent = blog.content;
+    content.appendChild(title);
+    content.appendChild(date);
+    content.appendChild(para);
+
+    box.appendChild(image);
+    box.appendChild(content);
+
+    boxContainer.appendChild(box);
+  }
+
+  // Create boxes for each blog in blogData
+  blogData.forEach((blog) => createBlogBox(blog));
+
+  // Key press event listener
+  document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % blogData.length;
+            } else if (event.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + blogData.length) % blogData.length;
+            }
+
+            showBlogs();
+        });
+
+        boxContainer.addEventListener('transitionend', () => {
+            boxes.forEach((box) => {
+                let boxIndex = parseInt(box.dataset.index);
+                if (boxIndex < currentIndex || boxIndex >= currentIndex + boxes.length) {
+                    box.style.opacity = '0';
+                } else {
+                    box.style.opacity = '1';
+                }
+            });
+
+            if (boxes[0].dataset.index > boxes[boxes.length - 1].dataset.index) {
+                boxContainer.style.transition = 'none';
+                currentIndex = -1;
+                boxContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+            } else if (boxes[boxes.length - 1].dataset.index < boxes.length - 1) {
+                boxContainer.style.transition = 'none';
+                currentIndex = blogData.length - boxes.length;
+                boxContainer.style.transform = `translateX(${-currentIndex * 100}%)`;
+            }
+        });
+    </script>
+
+</body>
+</html>

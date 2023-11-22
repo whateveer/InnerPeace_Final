@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Inner Peace - SPA & Beauty</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header -->
+    
+    <section class="header">
+        <a href="#" class="logo"> 
+        <img src="images/logoo.png" alt="Inner Peace Logo">
+        Inner Peace </a>
+        <nav class="navbar">
+           <div id="close-navbar" class="fas fa-times"></div>
+           <a href="index.html">home</a>
+           <a href="about.html">about</a>
+           <a href="services.html">services</a>
+           <a href="blogs.html">blogs</a>
+           <a href="events.html">special events</a>
+           <a href="podcasts.html">media</a>
+           <a href="faq.html">FAQ</a>
+
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+     
+    </section>
+<!-- header -->
+
+<!-- home -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <span>Welcome to</span>
+        <h3>the Sanctuary of Beauty, Relaxation & Transformation</h3>
+    </div>
+
+</section>
+<!-- home -->
+
+<!-- visit -->
+
+<section class="visit" id="visit">
+    <h1 class="heading" id="contactHeading">Contact Us</h1>
+    <div class="row">
+        <form id="contactForm" action="">
+            <h3>Leave us a message, your feedback is important</h3>
+            <div class="inputBox">
+                <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="inputBox">
+                <input type="email" placeholder="Your e-mail" required>
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Subject" required>
+            </div>
+            <div class="inputBox">
+                <input type="text" placeholder="Message" required>
+            </div>
+            <input type="submit" value="Send A Message" class="btn" id="submitButton">
+        </form>
+    </div>
+</section>
+
+
+<!-- footer -->
+
+<section class="footer">
+
+    <div class="box-container">
+ 
+       <div class="box">
+          <h3> Find us here </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, voluptatem.</p>
+          <div class="share">
+             <a href="#" class="fab fa-facebook-f"></a>
+             <a href="#" class="fab fa-twitter"></a>
+             <a href="#" class="fab fa-instagram"></a>
+             <a href="#" class="fab fa-linkedin"></a>
+          </div>
+       </div>
+ 
+       <div class="box">
+          <h3>contact us</h3>
+          <p>+7 700 341 5678</p>
+          <a href="#" class="link">innerpeace_spa@gmail.com</a>
+       </div>
+ 
+       <div class="box">
+          <h3>localization</h3>
+          <p> Mangilik el <br>
+            Astana <br>
+            Kazakhstan</p>
+       </div>
+ 
+    </div>
+ 
+    <div class="credit"> created by <span>Samal & Marzhan</span> | all rights reserved! </div>
+ 
+ </section>
+
+<!-- footer end-->
+
+<script src="js/script.js"></script>
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const inputBoxes = document.querySelectorAll('.inputBox');
+            const contactForm = document.getElementById('contactForm');
+            const contactHeading = document.getElementById('contactHeading');
+
+            contactHeading.style.transition = '1s';
+            contactHeading.style.opacity = 0;
+
+            contactForm.style.transition = '1s';
+            contactForm.style.opacity = 0;
+
+            inputBoxes.forEach((inputBox, index) => {
+                if (index % 2 === 0) {
+                    inputBox.style.transition = '1s';
+                    inputBox.style.transform = 'translateX(100%)';
+                } else {
+                    inputBox.style.transition = '1s';
+                    inputBox.style.transform = 'translateX(-100%)';
+                }
+            });
+
+            setTimeout(() => {
+                contactForm.style.display = 'none';
+                contactHeading.style.display = 'none';
+            }, 1000);
+        });
+    </script>
+
+
+</body>
+</html>
